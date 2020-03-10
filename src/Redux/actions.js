@@ -155,3 +155,12 @@ export const addallRatingsSummary=(allratings) => {
   }
   
 } 
+
+//ERROR MESSAGE REDUCER
+export const addErrorToState=(errorMessage) => {
+  return {
+    type: "ADD_ERROR_MESSAGE",
+    errorMessage
+  }
+  
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {addEmotionToState,addSentimentToState,addCommentToState,addToAllCommentsToState} from '../Redux/actions'
+import {addErrorToState,addEmotionToState,addSentimentToState,addCommentToState,addToAllCommentsToState} from '../Redux/actions'
 
 class CommentInput extends Component {
   //local component state
@@ -25,7 +25,11 @@ class CommentInput extends Component {
           "Authorization": `bearer ${token}`
         }
       })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok){throw res}
+        return res.json()
+      }
+      )
       .then((comment) => {
         // console.log(comment)
         // console.log(comment.comment)
@@ -33,6 +37,12 @@ class CommentInput extends Component {
         this.props.addToAllCommentsToState(comment.comment);
         this.props.addEmotionToState(comment.emotion);
         this.props.addSentimentToState(comment.sentiment);
+      })
+      .catch(err =>{
+        err.text().then(errorMessage=>{
+          console.log(errorMessage)
+          // this.props.addErrorToState(errorMessage)
+        })
       })
     // dispatch add comment action with the comment response from the database
     // the reducer will update the application state with this action
@@ -65,7 +75,7 @@ class CommentInput extends Component {
       <form onSubmit={this.handleSubmit} className="ui form">
         <div className="field">
           <label htmlFor="comment">Overall Comment(s):</label>
-          <div className="ui fluid input"><input id='inputrating' type="text" autoComplete="off" placeholder="text only, at least 15 characters long, no numbers" name="user_comment" value={this.state.user_comment} onChange={this.handleChange}/></div>
+          <div className="ui fluid input"><input type="text" autoComplete="off" placeholder="text only, at least 15 characters long, no numbers. e.g. cookies are sweet and delicious" name="user_comment" value={this.state.user_comment} onChange={this.handleChange}/></div>
           <div className="field"><button className="ui button">Submit</button></div>
           {/* <input id='inputrating' type="submit" value="Submit"/> */}
         </div>
@@ -74,7 +84,7 @@ class CommentInput extends Component {
   }
 }
 
-export default connect(null,{addEmotionToState,addSentimentToState,addCommentToState,addToAllCommentsToState})(CommentInput);
+export default connect(null,{addErrorToState,addEmotionToState,addSentimentToState,addCommentToState,addToAllCommentsToState})(CommentInput);
 
 {/* <button type="submit" class="ui button">Submit</button> */}
 

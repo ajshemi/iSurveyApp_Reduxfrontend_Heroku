@@ -13,6 +13,7 @@ import commentReducer from './Redux/commentReducer';
 import sentimentReducer from './Redux/sentimentReducer';
 import emotionReducer from './Redux/emotionReducer';
 import ratingReducer from './Redux/ratingReducer'
+import errorReducer from './Redux/errorReducer';
 import 'semantic-ui-css/semantic.min.css'
 
 const rootReducer = combineReducers(
@@ -22,7 +23,8 @@ const rootReducer = combineReducers(
         comments:commentReducer,
         sentiments:sentimentReducer,
         emotions:emotionReducer,
-        ratings:ratingReducer
+        ratings:ratingReducer,
+        error:errorReducer
     }
 )
 
