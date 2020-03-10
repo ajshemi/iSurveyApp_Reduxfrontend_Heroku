@@ -18,7 +18,7 @@ class NewRatingContainer extends Component {
     console.log(this.state)
     if (this.state.product_id > 0 && this.state.rating >0 && this.props?.token) {
 
-      fetch("http://localhost:3000/reviews", {
+      fetch("https://cookiesurveywebapp.herokuapp.com/reviews", {
         method: "POST",
         body: JSON.stringify(this.state),
         headers: {

@@ -6,11 +6,11 @@ import Chart from './Chart'
 
 class RatingSummaryContainer extends Component {
     handleRatingFetch=(e) => {
-        fetch('http://localhost:3000/allrating')
+        fetch('https://cookiesurveywebapp.herokuapp.com/allrating')
         .then(resp=>resp.json())
         .then(allratings=>this.props.addallRatingsSummary(allratings))
 
-        fetch(`http://localhost:3000/rating/${this.props.user.id}`)
+        fetch(`https://cookiesurveywebapp.herokuapp.com/rating/${this.props.user.id}`)
         .then(resp=>resp.json())
         .then(onerating=>this.props.addoneRatingSummary(onerating.rating))
     }

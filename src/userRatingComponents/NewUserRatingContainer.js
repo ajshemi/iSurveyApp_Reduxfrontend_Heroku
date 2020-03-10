@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Product from '../components/Product'
 import {connect} from 'react-redux'
 import {Grid, Card, GridColumn, Segment, Divider} from 'semantic-ui-react'
-// import CommentInput from '../components/CommentInput'
-// import Comments from '../components/Comments'
+import CommentInput from '../components/CommentInput'
+import Comments from '../components/Comments'
 import NewRatingContainer from './NewRatingContainer'
 import {saveUserToState} from '../Redux/actions'
 import ProductList from '../components/ProductList'
@@ -50,12 +50,12 @@ class NewUserRatingContainer extends Component {
           </Card.Group> */}
         
         </div>
-        {/* <div className="addcomment">
+        <div className="addcomment">
           <CommentInput />
-        </div> */}
-        {/* <div className="commentlist">
+        </div>
+        <div className="commentlist">
           <Comments user={this.props.user}/>
-        </div> */}
+        </div>
       </div>
     )};
   

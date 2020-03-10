@@ -16,7 +16,7 @@ class CommentInput extends Component {
     if(this.state.user_comment.length>15 && !/\d/.test(this.state.user_comment)){
     let token = localStorage.getItem('token')
     // console.log(token)
-    fetch("http://localhost:3000/comments",{
+    fetch("https://cookiesurveywebapp.herokuapp.com/comments",{
         method: "POST",
         body:JSON.stringify(this.state),
         // body: JSON.stringify({user_comment:this.state.comment,user_id:this.props.user.id}),
@@ -63,12 +63,14 @@ class CommentInput extends Component {
     // console.log(this.props.user.comment)
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="comment">Overall Comment:</label>
-        <input type="text" autoComplete="off" name="user_comment" value={this.state.user_comment} onChange={this.handleChange}/>
-        <input type="submit" value="Submit"/>
+        <label htmlFor="comment">Overall Comment(s):</label>
+        <input id='inputrating' type="text" autoComplete="off" name="user_comment" value={this.state.user_comment} onChange={this.handleChange}/>
+        <input id='inputrating' type="submit" value="Submit"/>
       </form>
     );
   }
 }
 
 export default connect(null,{addEmotionToState,addSentimentToState,addCommentToState,addToAllCommentsToState})(CommentInput);
+
+{/* <button type="submit" class="ui button">Submit</button> */}

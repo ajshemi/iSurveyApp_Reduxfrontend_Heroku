@@ -50,7 +50,8 @@ class ProductItem extends Component {
         if(this.props?.user){    
             // console.log(this.props.user)
             // console.log(review_id)
-            fetch(`http://localhost:3000/reviews/${review_id}`, {
+            // 'https://cookiesurveywebapp.herokuapp.com/'
+            fetch(`https://cookiesurveywebapp.herokuapp.com/reviews/${review_id}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `bearer ${this.props.token}`

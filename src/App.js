@@ -31,7 +31,7 @@ class App extends React.Component {
 
   componentDidMount() {
     //render products and comments when app loads
-    fetch("http://localhost:3000/products")
+    fetch("https://cookiesurveywebapp.herokuapp.com/products")
     .then(r => r.json())
     .then((products) => {
       // console.log(products)
@@ -39,19 +39,19 @@ class App extends React.Component {
     })   
     
   
-    fetch("http://localhost:3000/comments")
+    fetch("https://cookiesurveywebapp.herokuapp.com/comments")
     .then(r => r.json())
     .then((allcomments) => {
       this.props.addAllCommentsToState(allcomments) 
     })
 
-    fetch("http://localhost:3000/watson_sentiments")
+    fetch("https://cookiesurveywebapp.herokuapp.com/watson_sentiments")
     .then(r => r.json())
     .then((allsentiments) => {
       this.props.addAllSentimentsToState(allsentiments) 
     })
 
-    fetch("http://localhost:3000/watson_emotions")
+    fetch("https://cookiesurveywebapp.herokuapp.com/watson_emotions")
     .then(r => r.json())
     .then((allemotions) => {
       this.props.addAllEmotionsToState(allemotions) 
@@ -60,7 +60,7 @@ class App extends React.Component {
     //persist when token exist
     if (localStorage.getItem("token")) {
       let token = localStorage.getItem('token')
-      fetch("http://localhost:3000/persist", {
+      fetch("https://cookiesurveywebapp.herokuapp.com/persist", {
         headers: {
           "Authorization": `bearer ${token}`
         }
@@ -78,7 +78,7 @@ class App extends React.Component {
 
   handleLoginSubmit = (user) => {
     //login with username and password
-    fetch("http://localhost:3000/login", {
+    fetch("https://cookiesurveywebapp.herokuapp.com/login", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -100,7 +100,7 @@ class App extends React.Component {
 
   handleRegisterSubmit = (user) => {
     //
-    fetch("http://localhost:3000/users", {
+    fetch("https://cookiesurveywebapp.herokuapp.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json"
