@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 class Filter extends Component {
     handleChange=(e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         this.props.handleFilter(e.target.value)
     }
     render() {  

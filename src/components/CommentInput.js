@@ -41,7 +41,7 @@ class CommentInput extends Component {
       .catch(err =>{
         err.text().then(errorMessage=>{
           console.log(errorMessage)
-          // this.props.addErrorToState(errorMessage)
+          this.props.addErrorToState(errorMessage)
         })
       })
     // dispatch add comment action with the comment response from the database

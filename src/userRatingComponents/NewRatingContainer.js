@@ -15,7 +15,7 @@ class NewRatingContainer extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     // once set, send the new state to database
-    console.log(this.state)
+    // console.log(this.state)
     if (this.state.product_id > 0 && this.state.rating >0 && this.props?.token) {
 
       fetch("https://cookiesurveywebapp.herokuapp.com/reviews", {
@@ -28,7 +28,7 @@ class NewRatingContainer extends Component {
       })
       .then(res => res.json())
       .then((review) => {
-        console.log(review)
+        // console.log(review)
         this.props.saveUserToState(review)
       }
       )
@@ -58,7 +58,7 @@ class NewRatingContainer extends Component {
       const {product}=this.props.products
       const {user_ratings} =this.props.user
       let filterProducts=this.props.products.filter(product=>!user_ratings.map(ratedproduct=>ratedproduct.id).includes(product.id))
-      console.log(filterProducts)
+      // console.log(filterProducts)
     return (
       <div className="newratingdiv">
         <div>

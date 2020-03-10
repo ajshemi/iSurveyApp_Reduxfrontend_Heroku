@@ -8,7 +8,7 @@ export const saveUserToState = (user) => {
   }
 
  export const clearUserFromState = () => {
-   console.log('here')
+  //  console.log('here')
     return {
       type: "CLEAR_USER_FROM_STATE"
   }
@@ -24,7 +24,7 @@ export const saveUserToState = (user) => {
   }
 
   export const clearProductsFromState = () => {
-    console.log('here products')
+    // console.log('here products')
      return {
        type: "CLEAR_PRODUCTS_FROM_STATE"
    }
@@ -32,7 +32,7 @@ export const saveUserToState = (user) => {
 
 //SENTIMENT AND EMOTIONS RELATED ACTIONS 
  export const clearSentimentFromState = () => {
-  console.log('here products')
+  // console.log('here products')
    return {
      type: "CLEAR_SENTIMENT_FROM_STATE"
  }
@@ -51,7 +51,7 @@ export const addEmotionToState =(emotion) => {
 } 
 
 export const clearallEmotionsFromState = () => {
-  console.log('here products')
+  // console.log('here products')
   return {
     type: "CLEAR_ALL_EMOTIONS_FROM_STATE"
   }
@@ -90,7 +90,7 @@ export const deleteEmotionFromState=(emotion) => {
 
 //COMMENT RELATED ACTIONS
 export const clearallCommentsFromState = () => {
-  console.log('here products')
+  // console.log('here products')
     return {
       type: "CLEAR_ALL_COMMENTS_FROM_STATE"
   }
