@@ -62,10 +62,13 @@ class CommentInput extends Component {
   render() {
     // console.log(this.props.user.comment)
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="comment">Overall Comment(s):</label>
-        <input id='inputrating' type="text" autoComplete="off" name="user_comment" value={this.state.user_comment} onChange={this.handleChange}/>
-        <input id='inputrating' type="submit" value="Submit"/>
+      <form onSubmit={this.handleSubmit} className="ui form">
+        <div className="field">
+          <label htmlFor="comment">Overall Comment(s):</label>
+          <div className="ui fluid input"><input id='inputrating' type="text" autoComplete="off" placeholder="text only, at least 15 characters long, no numbers" name="user_comment" value={this.state.user_comment} onChange={this.handleChange}/></div>
+          <div className="field"><button className="ui button">Submit</button></div>
+          {/* <input id='inputrating' type="submit" value="Submit"/> */}
+        </div>
       </form>
     );
   }
@@ -74,3 +77,8 @@ class CommentInput extends Component {
 export default connect(null,{addEmotionToState,addSentimentToState,addCommentToState,addToAllCommentsToState})(CommentInput);
 
 {/* <button type="submit" class="ui button">Submit</button> */}
+
+// <div className="field">
+// <label>Username</label>
+// <div className="ui fluid input"><input name="username" type="text" placeholder="Username" value={username} onChange={this.handleChange} /></div>
+// </div

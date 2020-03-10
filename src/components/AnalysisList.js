@@ -6,10 +6,10 @@ class AnalysisList extends Component {
 
   render() {
     // console.log(this.props.comments.id)
-    let arrayOfEmotions=this.props?.emotions.slice(this.props.emotions.length-10,this.props.emotions.length).map(emotion=><CommentAnalysis key={emotion.id} emotion={emotion} comment={this.props.comments.find(comment=>comment.id===emotion.comment_id)} sentiment={this.props.sentiments.find(sentiment=>sentiment.comment_id===emotion.comment_id)}/>)
+    let arrayOfEmotions=this.props?.emotions.slice(this.props.emotions.length-5,this.props.emotions.length).map(emotion=><CommentAnalysis key={emotion.id} emotion={emotion} comment={this.props.comments.find(comment=>comment.id===emotion.comment_id)} sentiment={this.props.sentiments.find(sentiment=>sentiment.comment_id===emotion.comment_id)}/>)
     return (
       <>
-        <h2 className='commentlist'>Ten Most Recently Entered Comments</h2>
+        <h2 className='commentlist'>5 Recently Entered Comments</h2>
         <table className="ui celled padded table">
             <thead className="">
                 <tr className="">
