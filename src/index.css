@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #BEBEBE;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* apply on app component  */
+.App {
+  text-align:left;
+}
+
+/* id is most specific */
+#header {
+  background: red;
+  /* background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); */
+  /* background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); */
+  /* background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); */
+  /* background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); */
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  border:2px solid blue;
+  font-style: italic;
+}
+/* form */
+form {
+  text-align: center;
+  margin-top: 3rem;
+}
+.home{
+  text-align: center;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input, label {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+input[type="submit"]{
+  width: 10rem;
+  margin-top: 2rem;
+  height: 1.5rem;
+}
+
+ol {
+  width: 50%;
+  margin: auto;
+
+}
+
+ol li {
+  width: 20%;
+  margin: auto;
+
+}
+/* classname used in navbar */
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(5, 5, 109);
+  /* background-color: #333; */
+}
+
+ul.nav li {
+  float: left;
+}
+
+ul.nav li a {
+  display: block;
+  color: rgb(231, 222, 222);
+  text-align: right;
+  /* margin-bottom: 3%; */
+  /* text-align: center; */
+  padding: 14px 16px;
+  text-decoration: underline;
+}
+
+ul.nav li a:hover {
+  background-color: rgb(82, 55, 233);
+}
+
+/* .newratingdiv,field{
+
+
+} */
+
+.charttext{
+  text-align:center;
+  margin-top: 3%;
+  color: rgb(16, 3, 189);
+}
+.commentlist{
+  text-align:center;
+}
+.analysispage{
+  text-align:center;
+  color: blue;
+}
+.newratingdiv{
+  text-align:center;
+  margin-top:3%;
+  margin-bottom: 1%;
+}
+
+.allsearch{
+  display: inline-flex;
+  border:2px solid blue;
+  text-align: center;
+ }
+
+ .allcommentpage{
+  text-align: center;
+ }
+
+ .allproducts{
+  margin-top: 10%;
+  text-align: center;
+ }
+
+.filtersearch{
+  display:inline-table;
+  width:10%;
+  margin-left:5%
+}
+.sortsearch{
+  display: inline-table;
+  width:10%;
+  margin-left:5%
+}
+.searchsearc{
+  display: inline-table;
+  width:10%;
+  margin-left:5%
+}
+.ratedcookies{
+  padding-left: 3%;
+
+}
+
+.addcomment{
+  text-align: center;
+}
+#inputrating{
+  margin-left: 45%;
+  margin-top: 2%;
+}
+.ratingbutton{
+  margin-left: 10%;
+  /* margin-right:10%; */
+}
+
+.ratingsummary{
+  text-align:center;
+  margin-top:2%
+}
+/* .modalrating{
+  margin-left:30%;
+  margin-right:30%;
+} */
+
+
