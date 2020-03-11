@@ -149,7 +149,7 @@ class App extends React.Component {
   render(){
     // console.log(this.props);
     return (
-      <Container className="Appi">
+      <Container className="App">
         {/* <div className="App"> */}
           <Header/>
           <NavBar/>
