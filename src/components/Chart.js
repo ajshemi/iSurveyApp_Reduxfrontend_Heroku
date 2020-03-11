@@ -76,6 +76,14 @@ export default class Chart extends Component{
                 display:this.props.displayLegend,
                 position:this.props.legendPosition,
                 fontSize:50
+                },
+                scale:{
+                  pointLabels:{
+                    fontSize:20,
+                    fontColor:'#000',
+                    lineHeight:2,
+                  }
+
                 }
             }}
             />  
