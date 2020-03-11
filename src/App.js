@@ -149,8 +149,8 @@ class App extends React.Component {
   render(){
     // console.log(this.props);
     return (
-      <Container>
-        <div className="App">
+      <Container className="Appi">
+        {/* <div className="App"> */}
           <Header/>
           <NavBar/>
           <Switch>
@@ -172,7 +172,7 @@ class App extends React.Component {
             <Route path="/" exact render={() => <Home /> } />
             <Route render={ () => <PageNotFound/> } />
           </Switch>
-        </div>
+        {/* </div> */}
       </Container>
     );
   }
