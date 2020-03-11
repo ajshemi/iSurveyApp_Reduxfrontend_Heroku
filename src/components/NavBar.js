@@ -13,7 +13,7 @@ const NavBar = (props) => {
         <NavLink to="/login">Login</NavLink>
       </li> : ""}
       { !props.token ? <li>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/signup">Signup</NavLink>
       </li> : ""
       }
       <li>

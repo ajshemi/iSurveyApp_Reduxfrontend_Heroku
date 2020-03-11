@@ -2,6 +2,7 @@ import React from 'react';
 import {Switch, Route} from 'react-router'
 
 import {withRouter} from 'react-router-dom'
+import { Container } from 'semantic-ui-react'
 
 import Form from './components/Form'
 import NavBar from './components/NavBar'
@@ -123,8 +124,8 @@ class App extends React.Component {
   renderForm = (routerProps) => {
     if(routerProps.location.pathname === "/login"){
       return <Form formName="Login Form" handleSubmit={this.handleLoginSubmit}/>
-    } else if (routerProps.location.pathname === "/register") {
-      return <Form formName="Register Form" handleSubmit={this.handleRegisterSubmit}/>
+    } else if (routerProps.location.pathname === "/signup") {
+      return <Form formName="SignUp Form" handleSubmit={this.handleRegisterSubmit}/>
     }
   }
   // refreshPage=() =>{
@@ -148,29 +149,31 @@ class App extends React.Component {
   render(){
     // console.log(this.props);
     return (
-      <div className="App">
-        <Header/>
-        <NavBar/>
-        <Switch>
-          <Route path="/login" render={ this.renderForm } />
-          <Route path="/register" render={ this.renderForm } />
-          <Route path="/products" component={ ProductContainer } />
-          {/* <Route path="/rating" component={ UserRatingContainer } /> */}
-          {/* <Route path="/rating" component={ NewRatingContainer } />  */}
-          <Route path="/newrating" component={ NewUserRatingContainer } />
+      <Container>
+        <div className="App">
+          <Header/>
+          <NavBar/>
+          <Switch>
+            <Route path="/login" render={ this.renderForm } />
+            <Route path="/signup" render={ this.renderForm } />
+            <Route path="/products" component={ ProductContainer } />
+            {/* <Route path="/rating" component={ UserRatingContainer } /> */}
+            {/* <Route path="/rating" component={ NewRatingContainer } />  */}
+            <Route path="/newrating" component={ NewUserRatingContainer } />
 
-          {/* <Route path="/logout" render={ this.renderLogout } /> */}
-          <Route path="/allcomments" component={ AllCommentsContainer } /> 
-          {/* <Route path="/usersentiment" component={WatsonSentimentContainer}/> */}
-          {/* <Route path="/useremotions" component={WatsonEmotionContainer}/>  */}
-          <Route path="/charts" component={ChartsContainer}/>
-          <Route path="/analysis" component={AnalysisContainer}/> 
-          <Route path="/ratingsummary" component={RatingSummaryContainer}/> 
-          <Route path='/logout' render={this.handleLogout}/>
-          <Route path="/" exact render={() => <Home /> } />
-          <Route render={ () => <PageNotFound/> } />
-        </Switch>
-      </div>
+            {/* <Route path="/logout" render={ this.renderLogout } /> */}
+            <Route path="/allcomments" component={ AllCommentsContainer } /> 
+            {/* <Route path="/usersentiment" component={WatsonSentimentContainer}/> */}
+            {/* <Route path="/useremotions" component={WatsonEmotionContainer}/>  */}
+            <Route path="/charts" component={ChartsContainer}/>
+            <Route path="/analysis" component={AnalysisContainer}/> 
+            <Route path="/ratingsummary" component={RatingSummaryContainer}/> 
+            <Route path='/logout' render={this.handleLogout}/>
+            <Route path="/" exact render={() => <Home /> } />
+            <Route render={ () => <PageNotFound/> } />
+          </Switch>
+        </div>
+      </Container>
     );
   }
 
