@@ -42,8 +42,8 @@ class PopupForm extends Component {
   
   render() {
     const { rating,product_id } = this.state
-    console.log(this.state)
-    console.log(this.props.product.review_id)
+    // console.log(this.state)
+    // console.log(this.props.product.review_id)
     return (
       <div>
         <div>{`Rating: ${rating} Product_id:${product_id}`}</div>

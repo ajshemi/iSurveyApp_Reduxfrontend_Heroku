@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Product from './Product'
-import {Switch, Route} from 'react-router'
+import { Route} from 'react-router'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { Card } from 'semantic-ui-react'
@@ -31,10 +31,10 @@ class ProductContainer extends React.Component {
         <div role="list" className="ui list">
           {productlinks}
         </div>
-        <Switch>
+        {/* <Switch> */}
          <Route path="/products/:id" render={this.renderProduct}/>
          <Route path="/products/" render={ () => <p>click on a product</p> } />
-        </Switch>
+        {/* </Switch> */}
       </div>
     )
   }
