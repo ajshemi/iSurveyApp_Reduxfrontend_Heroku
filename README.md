@@ -33,7 +33,6 @@ This web app makes use of the following:
 - Rails [~> 5.2.3] - MVC web framework used as an API
 - Bcrypt [~> 3.1.7] - Gem for encryption and securing user passwords
 - Dotenv - Rails gem for securing API Keys
-- Faker - Rails gem used to easily generate fake data: menu items
 - IBM Watson SDK - IBM Watson Natural Language Understanding (NLU).
 - Active Model Serializers - Serializing API routes to JSON
 - JWT - securing tokens
@@ -43,7 +42,9 @@ This web app makes use of the following:
 
 - React.js
 - React Router - Declarative Routing
+- React Redux - State Management
 - Semantic UI React
+- Chart.js - Charts and Plots
 <!-- - Custom CSS3 styling -->
 
 ## Installing
@@ -70,7 +71,7 @@ This web app makes use of the following:
 
 ## Features
 
-Users are able to sign up and log in. Upon signing in, users are taken to a home page.
+Cookie survey app home page.
 
 <p align="center">
 <img src="./readme-gifs/Animated GIF-downsized.gif"
