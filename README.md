@@ -69,3 +69,11 @@ This web app makes use of the following:
 - When prompted, ensure Frontend is running at `http://localhost:3001`
 
 ## Features
+
+Users are able to sign up and log in. Upon signing in, users are taken to a home page.
+
+<p align="center">
+<img src="./readme-gifs/Animated GIF-downsized.gif"
+     alt="sign in option taken to home page"
+     style="max-width: 100%" />
+</p
