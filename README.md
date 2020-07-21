@@ -1,3 +1,5 @@
+# README
+
 \*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 \*Front-end built with React, HTML, CSS, and Chart.js
@@ -75,6 +77,22 @@ Cookie survey app home page.
 
 <p align="center">
 <img src="./readme-gifs/Animated GIF-downsized.gif"
+     alt="sign in option taken to home page"
+     style="max-width: 100%" />
+</p
+
+Cookie survey app login page.
+
+<p align="center">
+<img src="./readme-gifs/login_page.gif"
+     alt="sign in option taken to home page"
+     style="max-width: 100%" />
+</p
+
+Cookie survey app Rating page.
+
+<p align="center">
+<img src="./readme-gifs/rating_page.gif"
      alt="sign in option taken to home page"
      style="max-width: 100%" />
 </p
