@@ -1,20 +1,20 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #BEBEBE;
+  background-color: #bebebe;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 /* apply on app component  */
 .App {
-  text-align:left;
+  text-align: left;
 }
 
 /* id is most specific */
@@ -27,7 +27,7 @@ code {
   /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   font-size: 5rem;
-  border:2px solid blue;
+  border: 2px solid blue;
   font-style: italic;
 }
 /* form */
@@ -35,7 +35,7 @@ form {
   text-align: center;
   margin-top: 3rem;
 }
-.home{
+.home {
   text-align: center;
 }
 
@@ -43,136 +43,181 @@ label {
   font-size: 1.5rem;
 }
 
-input, label {
+input,
+label {
   display: block;
   margin: auto;
   text-align: center;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   width: 10rem;
   margin-top: 2rem;
   height: 1.5rem;
 }
 
-ol {
+/* ol {
   width: 50%;
   margin: auto;
-
 }
 
 ol li {
   width: 20%;
   margin: auto;
+} */
 
+nav {
+  height: 100%;
+  /* background: #5b78c7; */
 }
 /* classname used in navbar */
 ul.nav {
-  list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   display: flex;
+  list-style-type: none;
+  /* align-items: center; */
+  /* box-sizing: border-box; */
+  overflow: hidden;
   justify-content: space-evenly;
   background-color: rgb(5, 5, 109);
+  /* margin-left: auto; */
+  /* justify-content: space-around; */
   /* background-color: #333; */
 }
 
-ul.nav li {
-  float: left;
-}
+/* ul.nav li {
+  float: none;
+} */
 
 ul.nav li a {
   display: block;
+  text-decoration: underline;
   color: rgb(231, 222, 222);
-  text-align: right;
+  /* text-align: right; */
+  padding: 14px 16px;
   /* margin-bottom: 3%; */
   /* text-align: center; */
-  padding: 14px 16px;
-  text-decoration: underline;
 }
 
 ul.nav li a:hover {
   background-color: rgb(82, 55, 233);
 }
 
-/* .newratingdiv,field{
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
 
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: lightblue;
+  border-radius: 10px;
+}
 
-} */
+@media (max-width: 760px) {
+  /* nav {
+    flex-direction: column;
+    align-items: flex-start;
+  } */
 
-.charttext{
-  text-align:center;
+  .toggle-button {
+    display: flex;
+  }
+
+  ul.nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    /* background-color: rgb(5, 5, 109); */
+  }
+
+  ul.nav li a {
+    padding: 0.5rem 1rem;
+  }
+
+  ul.nav.active {
+    display: flex;
+  }
+}
+
+.charttext {
+  text-align: center;
   margin-top: 3%;
   color: rgb(16, 3, 189);
 }
-.commentlist{
-  text-align:center;
+.commentlist {
+  text-align: center;
 }
-.analysispage{
-  text-align:center;
+.analysispage {
+  text-align: center;
   color: blue;
 }
-.newratingdiv{
-  text-align:center;
-  margin-top:3%;
+.newratingdiv {
+  text-align: center;
+  margin-top: 3%;
   margin-bottom: 1%;
 }
 
-.allsearch{
+.allsearch {
   display: inline-flex;
-  border:2px solid blue;
+  border: 2px solid blue;
   text-align: center;
- }
+}
 
- .allcommentpage{
+.allcommentpage {
   text-align: center;
- }
+}
 
- .allproducts{
+.allproducts {
   margin-top: 10%;
   text-align: center;
- }
+}
 
-.filtersearch{
-  display:inline-table;
-  width:10%;
-  margin-left:5%
-}
-.sortsearch{
+.filtersearch {
   display: inline-table;
-  width:10%;
-  margin-left:5%
+  width: 10%;
+  margin-left: 5%;
 }
-.searchsearc{
+.sortsearch {
   display: inline-table;
-  width:10%;
-  margin-left:5%
+  width: 10%;
+  margin-left: 5%;
 }
-.ratedcookies{
+.searchsearc {
+  display: inline-table;
+  width: 10%;
+  margin-left: 5%;
+}
+.ratedcookies {
   padding-left: 3%;
-
 }
 
-.addcomment{
+.addcomment {
   text-align: center;
 }
-#inputrating{
+#inputrating {
   margin-left: 45%;
   margin-top: 2%;
 }
-.ratingbutton{
+.ratingbutton {
   margin-left: 10%;
   /* margin-right:10%; */
 }
 
-.ratingsummary{
-  text-align:center;
-  margin-top:2%
+.ratingsummary {
+  text-align: center;
+  margin-top: 2%;
 }
 /* .modalrating{
   margin-left:30%;
   margin-right:30%;
 } */
-
-
