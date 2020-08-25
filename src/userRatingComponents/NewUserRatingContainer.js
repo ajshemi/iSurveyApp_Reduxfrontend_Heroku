@@ -32,7 +32,7 @@ class NewUserRatingContainer extends Component {
   render() {
     //pass the app state as this.props.user
     let { user, error } = this.props;
-    console.log(error);
+    // console.log(error);
     return (
       <div className="newratingdiv">
         <div className="">
