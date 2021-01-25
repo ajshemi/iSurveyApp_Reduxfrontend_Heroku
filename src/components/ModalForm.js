@@ -29,4 +29,4 @@ class ModalForm extends Component {
     }
   }
   
-  export default ModaForm
+  export default ModaForm;

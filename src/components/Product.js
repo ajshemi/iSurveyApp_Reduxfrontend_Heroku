@@ -1,11 +1,8 @@
 import React,{Component} from 'react';
-import { Modal,Button,Card,Image } from 'semantic-ui-react'
+import { Modal,Button,Card} from 'semantic-ui-react'
 import {GoTrashcan} from 'react-icons/go'
 import {FaEdit} from 'react-icons/fa'
 import PopupForm from './PopupForm'
-// import { render } from 'react';
-// import ReviewContainer from './ReviewContainer'
-// import ReviewInput from './ReviewInput'
 
 
 
@@ -91,7 +88,7 @@ class Product extends Component {
        </>
   
     )
-};
+  }
 }
 export default Product
 

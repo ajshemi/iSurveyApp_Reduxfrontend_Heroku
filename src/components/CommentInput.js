@@ -25,7 +25,8 @@ class CommentInput extends Component {
     ) {
       let token = localStorage.getItem("token");
       // console.log(token)
-      fetch("https://cookiesurveywebapp.herokuapp.com/comments", {
+      // fetch("https://cookiesurveywebapp.herokuapp.com/comments", {
+        fetch("http://localhost:3000/comments",{
         method: "POST",
         body: JSON.stringify(this.state),
         // body: JSON.stringify({user_comment:this.state.comment,user_id:this.props.user.id}),
@@ -119,12 +120,3 @@ export default connect(null, {
   addCommentToState,
   addToAllCommentsToState,
 })(CommentInput);
-
-{
-  /* <button type="submit" class="ui button">Submit</button> */
-}
-
-// <div className="field">
-// <label>Username</label>
-// <div className="ui fluid input"><input name="username" type="text" placeholder="Username" value={username} onChange={this.handleChange} /></div>
-// </div

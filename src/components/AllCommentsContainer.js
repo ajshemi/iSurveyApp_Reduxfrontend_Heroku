@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {Container} from 'semantic-ui-react'
+// import {Container} from 'semantic-ui-react'
 import SearchBarContainer from './SearchBarContainer';
 import CommentCollection from './CommentCollection'
 import {addAllCommentsToState} from '../Redux/actions'

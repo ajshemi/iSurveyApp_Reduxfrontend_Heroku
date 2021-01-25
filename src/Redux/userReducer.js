@@ -1,6 +1,6 @@
 const initialState = {user: {user_ratings:[],comments:[],token:''}}
 
-const userReducer = (state = initialState, action) => {
+const userReducer = (action,state = initialState) => {
     switch (action.type) {
   
       case "SAVE_USER_TO_STATE":

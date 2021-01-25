@@ -17,6 +17,8 @@ export const saveUserToState = (user) => {
  
 //PRODUCT RELATED ACTIONS 
   export const addProductsToState = (products) => {
+    console.log('add all products')
+
     return {
       type: "ADD_PRODUCTS",
       products

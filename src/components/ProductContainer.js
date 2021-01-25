@@ -4,7 +4,7 @@ import Product from './Product'
 import { Route} from 'react-router'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import { Card } from 'semantic-ui-react'
+// import { Card } from 'semantic-ui-react'
 
 class ProductContainer extends React.Component {
   renderProduct=(routerProps) => {

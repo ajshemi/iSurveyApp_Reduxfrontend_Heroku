@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {updateRatingToState,saveUserToState} from '../Redux/actions'
 import RatingForm from '../components/RatingForm'
-import { Rating} from 'semantic-ui-react'
+// import { Rating} from 'semantic-ui-react'
 
 class NewRatingContainer extends Component {
   //local component state
@@ -18,7 +18,8 @@ class NewRatingContainer extends Component {
     // console.log(this.state)
     if (this.state.product_id > 0 && this.state.rating >0 && this.props?.token) {
 
-      fetch("https://cookiesurveywebapp.herokuapp.com/reviews", {
+      // fetch("https://cookiesurveywebapp.herokuapp.com/reviews", {
+        fetch("http://localhost:3000/reviews",{
         method: "POST",
         body: JSON.stringify(this.state),
         headers: {
@@ -55,9 +56,9 @@ class NewRatingContainer extends Component {
   }
 
   render() {
-      const {product}=this.props.products
+      // const {product}=this.props.products
       const {user_ratings} =this.props.user
-      let filterProducts=this.props.products.filter(product=>!user_ratings.map(ratedproduct=>ratedproduct.id).includes(product.id))
+      // let filterProducts=this.props.products.filter(product=>!user_ratings.map(ratedproduct=>ratedproduct.id).includes(product.id))
       // console.log(filterProducts)
     return (
       <div className="newratingdiv">

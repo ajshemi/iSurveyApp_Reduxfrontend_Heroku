@@ -6,7 +6,7 @@ import { Container } from "semantic-ui-react";
 
 import Form from "./components/Form";
 import NavBar from "./components/NavBar";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Home from "./components/Home";
 import ProductContainer from "./components/ProductContainer";
 import AllCommentsContainer from "./components/AllCommentsContainer";
@@ -42,7 +42,7 @@ class App extends React.Component {
     fetch("http://localhost:3000/products")
       .then((r) => r.json())
       .then((products) => {
-        // console.log(products)
+        console.log(products)
         this.props.addProductsToState(products);
       });
 
@@ -167,14 +167,8 @@ class App extends React.Component {
           <Route path="/login" render={this.renderForm} />
           <Route path="/signup" render={this.renderForm} />
           <Route path="/products" component={ProductContainer} />
-          {/* <Route path="/rating" component={ UserRatingContainer } /> */}
-          {/* <Route path="/rating" component={ NewRatingContainer } />  */}
           <Route path="/newrating" component={NewUserRatingContainer} />
-
-          {/* <Route path="/logout" render={ this.renderLogout } /> */}
           <Route path="/allcomments" component={AllCommentsContainer} />
-          {/* <Route path="/usersentiment" component={WatsonSentimentContainer}/> */}
-          {/* <Route path="/useremotions" component={WatsonEmotionContainer}/>  */}
           <Route path="/charts" component={ChartsContainer} />
           <Route path="/analysis" component={AnalysisContainer} />
           <Route path="/ratingsummary" component={RatingSummaryContainer} />

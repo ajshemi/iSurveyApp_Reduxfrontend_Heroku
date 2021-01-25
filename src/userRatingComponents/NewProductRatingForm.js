@@ -14,7 +14,7 @@ class NewProductRatingForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     //once set, send the new state to database
-    console.log(this.state)
+    // console.log(this.state)
     // if (this.state.product_id > 0 && this.state.rating >0 && this.props?.token) {
 
     //   fetch("http://localhost:3000/reviews", {

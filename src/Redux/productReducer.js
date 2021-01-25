@@ -1,10 +1,11 @@
-const initialState = {
-    products: []
-  }
-  const productReducer = (state = initialState, action) => {
+// const initialState = {
+//     products: []
+//   }
+  const productReducer = (action,state = {products:[]}) => {
     switch (action.type) {
-  
+      
       case "ADD_PRODUCTS":
+        // console.log(action.type)
         // console.log('add products to state when page loads')
         return {...state, products: action.products}
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-// import {deleteCommentFromState} from '../Redux/actions'
 import Comment from './Comment'
 
 class CommentCollection extends Component {

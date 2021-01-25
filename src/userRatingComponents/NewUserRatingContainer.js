@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Product from "../components/Product";
+// import Product from "../components/Product";
 import { connect } from "react-redux";
-import { Grid, Card, GridColumn, Segment, Divider } from "semantic-ui-react";
+// import { Grid, Card, GridColumn, Segment, Divider } from "semantic-ui-react";
 import CommentInput from "../components/CommentInput";
 import Comments from "../components/Comments";
 import NewRatingContainer from "./NewRatingContainer";
@@ -10,7 +10,7 @@ import ProductList from "../components/ProductList";
 
 class NewUserRatingContainer extends Component {
   //use the review_id to delete the review/rating/user association
-  handleDeleteReview = (review_id) => {
+  // handleDeleteReview = (review_id) => {
     // if(this.props?.user){
     //   // console.log(this.props.user)
     //   // console.log(review_id)
@@ -27,7 +27,7 @@ class NewUserRatingContainer extends Component {
     //   }
     //   )
     // }
-  };
+  // };
 
   render() {
     //pass the app state as this.props.user
@@ -46,9 +46,7 @@ class NewUserRatingContainer extends Component {
             user.user_ratings.length < 1 ? "No" : user.user_ratings.length
           } Product${user.user_ratings.length > 1 ? "s" : ""}`}</h3>
           {user.user_ratings.length < 1 ? "" : <ProductList />}
-          {/* <Card.Group itemsPerRow={3}>
-            {user?.user_ratings?.map(product => <Product handleDeleteReview={this.handleDeleteReview} key={product.review_id} product={product} user={user} />)}
-          </Card.Group> */}
+
         </div>
         <div className="addcomment">
           <CommentInput />
