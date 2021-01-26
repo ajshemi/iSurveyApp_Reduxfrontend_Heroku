@@ -42,7 +42,7 @@ class App extends React.Component {
     fetch("http://localhost:3000/products")
       .then((r) => r.json())
       .then((products) => {
-        console.log(products)
+        // console.log(products)
         this.props.addProductsToState(products);
       });
 
