@@ -1,6 +1,6 @@
 const initialState = {onerating:[],allratings:[]}
 
-const ratingReducer = (action,state = initialState) => {
+const ratingReducer = (state=initialState,action) => {
 switch (action.type) {
 
     case "ADD_ONE_RATING_SUMMARY":

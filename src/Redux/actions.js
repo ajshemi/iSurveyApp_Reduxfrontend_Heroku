@@ -1,11 +1,11 @@
 
 //USER RELATED ACTIONS
 export const saveUserToState = (user) => {
-    return {
+  return {
       type: "SAVE_USER_TO_STATE",
       user
-    }
   }
+}
 
  export const clearUserFromState = () => {
   //  console.log('here')
@@ -16,28 +16,28 @@ export const saveUserToState = (user) => {
   
  
 //PRODUCT RELATED ACTIONS 
-  export const addProductsToState = (products) => {
-    console.log('add all products')
+export const addProductsToState = (products) => {
+  // console.log('add all products')
 
-    return {
-      type: "ADD_PRODUCTS",
-      products
-    }
+  return {
+    type: "ADD_PRODUCTS",
+    products
   }
+}
 
-  export const clearProductsFromState = () => {
-    // console.log('here products')
-     return {
-       type: "CLEAR_PRODUCTS_FROM_STATE"
-   }
- }
+export const clearProductsFromState = () => {
+  console.log('here products')
+    return {
+      type: "CLEAR_PRODUCTS_FROM_STATE"
+  }
+}
 
 //SENTIMENT AND EMOTIONS RELATED ACTIONS 
- export const clearSentimentFromState = () => {
-  // console.log('here products')
-   return {
-     type: "CLEAR_SENTIMENT_FROM_STATE"
- }
+export const clearSentimentFromState = () => {
+// console.log('here products')
+  return {
+    type: "CLEAR_SENTIMENT_FROM_STATE"
+}
 }
 export const addSentimentToState =(sentiment) => {
   return{

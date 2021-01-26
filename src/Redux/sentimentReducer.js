@@ -2,7 +2,7 @@
 const initialState = {
     sentiments: []
   }
-  const sentimentReducer = (action,state = initialState) => {
+  const sentimentReducer = (state=initialState,action) => {
     switch (action.type) {
   
       case "ADD_SENTIMENT":

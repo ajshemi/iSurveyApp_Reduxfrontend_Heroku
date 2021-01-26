@@ -3,7 +3,7 @@ const initialState = {
     allcomments: []
   }
 // let state = initialState;
-  const commentReducer = (action,state=initialState) => {
+  const commentReducer = (state=initialState,action) => {
     switch (action.type) {
   
       case "ADD_ALL_COMMENTS":
