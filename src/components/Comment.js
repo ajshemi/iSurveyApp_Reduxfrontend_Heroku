@@ -10,8 +10,8 @@ class Comment extends Component {
         let token = localStorage.getItem('token')
         if(this.props.comment.id)
         {
-          // fetch(`https://cookiesurveywebapp.herokuapp.com/comments/${this.props.comment.id}`, {
-          fetch(`http://localhost:3000/comments/${this.props.comment.id}`, {
+          fetch(`https://cookiesurveywebapp.herokuapp.com/comments/${this.props.comment.id}`, {
+          // fetch(`http://localhost:3000/comments/${this.props.comment.id}`, {
 
             method: "DELETE",
             body: JSON.stringify(this.props.comment),

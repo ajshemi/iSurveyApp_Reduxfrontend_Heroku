@@ -27,8 +27,8 @@ class CommentInput extends Component {
     ) {
       let token = localStorage.getItem("token");
       // console.log(token)
-      // fetch("https://cookiesurveywebapp.herokuapp.com/comments", {
-        fetch("http://localhost:3000/comments",{
+      fetch("https://cookiesurveywebapp.herokuapp.com/comments", {
+        // fetch("http://localhost:3000/comments",{
         method: "POST",
         body: JSON.stringify(this.state),
         // body: JSON.stringify({user_comment:this.state.comment,user_id:this.props.user.id}),

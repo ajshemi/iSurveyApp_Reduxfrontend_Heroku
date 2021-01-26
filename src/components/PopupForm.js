@@ -24,8 +24,8 @@ class PopupForm extends Component {
     // console.log(this.state)
     if (this.state.product_id > 0 && this.state.rating >0) {
 
-      // fetch(`https://cookiesurveywebapp.herokuapp.com/reviews/${this.props.product.review_id}`, {
-        fetch(`http://localhost:3000/reviews/${this.props.product.review_id}`,{
+      fetch(`https://cookiesurveywebapp.herokuapp.com/reviews/${this.props.product.review_id}`, {
+        // fetch(`http://localhost:3000/reviews/${this.props.product.review_id}`,{
         method: "PATCH",
         body: JSON.stringify({rating:this.state.rating}),
         headers: {
