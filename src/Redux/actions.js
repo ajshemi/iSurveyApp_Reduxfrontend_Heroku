@@ -166,3 +166,9 @@ export const addErrorToState=(errorMessage) => {
   }
   
 }
+
+export const clearErrorFromState = () => {
+  return {
+    type: "CLEAR_ERROR_MESSAGE"
+  }
+}

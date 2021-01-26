@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   addErrorToState,
+  clearErrorFromState,
   addEmotionToState,
   addSentimentToState,
   addCommentToState,
@@ -13,6 +14,7 @@ class CommentInput extends Component {
   state = {
     user_comment: "",
   };
+
 
   handleSubmit = (e) => {
     //fetch with the new set state
@@ -46,13 +48,14 @@ class CommentInput extends Component {
           // console.log(comment)
           // console.log(comment.comment)
           if (comment.error) {
-            console.log(comment.error);
+            // console.log(comment.error);
             this.props.addErrorToState(comment.error);
           } else {
             this.props.addCommentToState(comment.comment);
             this.props.addToAllCommentsToState(comment.comment);
             this.props.addEmotionToState(comment.emotion);
             this.props.addSentimentToState(comment.sentiment);
+            this.props.clearErrorFromState();
           }
         });
       // .catch((err) => {
@@ -115,6 +118,7 @@ class CommentInput extends Component {
 
 export default connect(null, {
   addErrorToState,
+  clearErrorFromState,
   addEmotionToState,
   addSentimentToState,
   addCommentToState,

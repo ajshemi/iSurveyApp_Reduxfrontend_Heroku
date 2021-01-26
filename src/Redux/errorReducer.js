@@ -15,6 +15,9 @@ const errorReducer = (state=initialState,action) => {
     return { ...state, errorMessage: action.errorMessage };
 
   }
+  if (action.type==="CLEAR_ERROR_MESSAGE"){
+    return {...state, errorMessage: {}}
+  }
   else{
     return state
   }

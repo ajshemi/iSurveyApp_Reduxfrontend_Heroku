@@ -2,7 +2,7 @@ const initialState = {
     products: []
 }
 function productReducer(state=initialState,action) {
-  debugger
+  // debugger
   switch (action.type) {
 
 
