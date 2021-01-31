@@ -24,8 +24,8 @@ import PageNotFound from "./components/PageNotFound";
 
 import { connect } from "react-redux";
 import {
-  clearallEmotionsFromState,
-  clearSentimentFromState,
+  // clearallEmotionsFromState,
+  // clearSentimentFromState,
   clearUserFromState,
   addProductsToState,
   saveUserToState,
@@ -143,19 +143,14 @@ class App extends React.Component {
   //   window.location.reload(false);
   // }
 
-  handleLogout = (routerProps) => {
-    if (routerProps.location.pathname === "/logout") {
-      localStorage.clear();
-      this.props.clearUserFromState();
-      // this.props.clearProductsFromState()
-      // this.props.clearallCommentsFromState()
-      // this.props.clearSentimentFromState()
-      // this.props.clearallEmotionsFromState()
 
-      return <Home />;
-    }
-  };
-
+  handleLogout = () => {
+    localStorage.clear();
+    this.props.clearUserFromState();
+    this.props.history.push("/login");
+      
+    };
+  
   render() {
     // console.log(this.props);
     return (
@@ -172,8 +167,7 @@ class App extends React.Component {
           <Route path="/charts" component={ChartsContainer} />
           <Route path="/analysis" component={AnalysisContainer} />
           <Route path="/ratingsummary" component={RatingSummaryContainer} />
-          <Route path="/logout" render={this.handleLogout} />
-          <Route path="/" exact render={() => <Home />} />
+          <Route path="/" exact render={() => <Home handleLogout={this.handleLogout} />} />
           <Route render={() => <PageNotFound />} />
         </Switch>
         {/* </div> */}
@@ -188,8 +182,8 @@ class App extends React.Component {
 // }
 
 export default connect(null, {
-  clearallEmotionsFromState,
-  clearSentimentFromState,
+  // clearallEmotionsFromState,
+  // clearSentimentFromState,
   clearUserFromState,
   addProductsToState,
   saveUserToState,

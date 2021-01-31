@@ -67,13 +67,6 @@ const NavBar = (props) => {
         ) : (
           ""
         )}
-        {props?.token ? (
-          <li>
-            <NavLink to="/logout">Logout</NavLink>
-          </li>
-        ) : (
-          ""
-        )}
         {props?.token && props.user.user_ratings.length === 3 ? (
           <li>
             <NavLink to="/ratingsummary">RatingSummary</NavLink>
